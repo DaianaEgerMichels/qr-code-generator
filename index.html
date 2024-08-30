@@ -11,7 +11,7 @@
 </head>
 <body>
     <div class="container">
-        <div class="content-generator">
+        <div id="content-generator" class="content-generator">
             <div class="content-logo">
                 <img src="assets/logo-qr-generator.svg" alt="logo-qr-generator">
             </div>
@@ -25,12 +25,14 @@
             <div class="content-header">
                 <img src="assets/logo-qr-generator.svg" alt="logo-qr-generator">
             </div>
-            <div id="content-qr-code" class="content-qr-code">
-                <img src="" alt="qr-code">
-            </div>
-            <div class="content-buttons">
-                <button id="btn-download" onclick="download()">Download</button>
-                <button id="btn-share" onclick="share()">Share</button>
+            <div class="content-body">
+                <div id="content-qr-code" class="content-qr-code">
+                    <img src="" alt="qr-code">
+                </div>
+                <div class="content-buttons">
+                    <button id="btn-download" onclick="download()">Download</button>
+                    <button id="btn-share" onclick="share()">Share</button>
+                </div>
             </div>
         </div>
         

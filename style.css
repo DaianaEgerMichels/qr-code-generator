@@ -5,22 +5,130 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f4f4f4;
+    margin: 0;
+    font-family: 'Outfit', sans-serif;
+    background-color: #364153;
 }
 
 .container {
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
     padding: 20px;
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.content-generator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width:100%;
 }
 
 .hidden {
     display: none;
+}
+
+.content-logo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 24px;
+}
+
+.content-logo img {
+    max-width: 256px;
+}
+
+.content-input {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+}
+
+#url {
+    width: 100%;
+    height: 50px;
+    padding: 10px 50px 10px 15px;
+    border-radius: 15px;
+    border: 2px solid #3662E3;
+    box-sizing: border-box;
+    font-size: 16px;
+    background: #111729;
+    color: #4e80ee33;
+    outline: none;
+}
+
+#btn-generate {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    bottom: 5px;
+    background-color: #3662E3;
+    color: #F2F5F9;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.content-download:hidden {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+    max-width: 400px;
+}
+
+.content-header {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.content-header img {
+    max-width: 250px;
+}
+
+.content-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.content-qr-code {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    width: 100%;
+}
+
+.content-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 10px;
+    width: 100%;
+}
+
+#btn-download , #btn-share {
+    background-color: #3662E3; 
+    color: #F2F5F9;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 150px;
 }

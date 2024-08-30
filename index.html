@@ -4,15 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
     <title>QR Code Generator</title>
 </head>
 <body>
     <div class="container">
-        <h1>QR Code Generator</h1>
-        <input type="text" placeholder="Enter text or URL">
-        <button click="generate()">Generate</button>
+        <div class="content-generator">
+            <div class="content-logo">
+                <img src="assets/logo-qr-generator.svg" alt="logo-qr-generator">
+            </div>
+            <div class="content-input">
+                <input id="url" type="text" placeholder="Enter an url">
+                <button id="btn-generate" onclick="generate()">QR code</button>
+            </div>
+        </div>
+
+        <div class="content-download hidden">
+            <div class="content-header">
+                <img src="assets/logo-qr-generator.svg" alt="logo-qr-generator">
+            </div>
+            <div id="content-qr-code" class="content-qr-code">
+                <img src="" alt="qr-code">
+            </div>
+            <div class="content-buttons">
+                <button id="btn-download" onclick="download()">Download</button>
+                <button id="btn-share" onclick="share()">Share</button>
+            </div>
+        </div>
+        
     </div>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" integrity="sha512-CNgIRecGo7nphbeZ04Sc13ka07paqdeTu0WR1IM4kNcpmBAUSHSQX0FslNhTDadL4O5SAGapGt4FodqL8My0mA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="script.js"></script>
+    
 </body>
 </html>

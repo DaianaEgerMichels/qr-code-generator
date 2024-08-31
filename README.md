@@ -66,7 +66,14 @@ qr-code-generator/
 
 ### Screenshots
 
+![Home](assets/qr-generate-home.png)
 
+![QR Code](assets/qr-code-netlify-link.png)
+
+
+### Overview
+
+[Live Code](https://66d27298fd705285284283c3--qr-code-generator-daiana-michels.netlify.app/)
 
 ## Contributing
 

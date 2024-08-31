@@ -12,6 +12,10 @@ body {
     margin: 0;
     font-family: 'Outfit', sans-serif;
     background-color: #364153;
+    background-image: url("./assets/bg-illustration.svg");
+    background-repeat: no-repeat;
+    background-position: calc(100% - 30%) 75%;
+    background-size: auto 80%;
 }
 
 .container {
@@ -29,10 +33,6 @@ body {
     flex-direction: column;
     align-items: center;
     width:100%;
-}
-
-.hidden {
-    display: none;
 }
 
 .content-logo {
@@ -78,7 +78,7 @@ body {
     font-size: 16px;
 }
 
-.content-download:hidden {
+.content-download {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -87,6 +87,10 @@ body {
     max-width: 400px;
 }
 
+.hidden {
+    display: none;
+}  
+
 .content-header {
     position: absolute;
     top: 20px;
@@ -94,7 +98,7 @@ body {
 }
 
 .content-header img {
-    max-width: 250px;
+    max-width: 150px;
 }
 
 .content-body {
@@ -106,29 +110,87 @@ body {
 }
 
 .content-qr-code {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 20px 0;
-    width: 100%;
+    margin: 40px 0;
+    width: 200px;
+    height: 200px;
+    background-color: rgba(54, 98, 227, 0.15);
+    border-radius: 50%; 
+}
+
+.content-qr-code img {
+    background-color: white;
+    padding: 20px;
+    border-radius: 20px;
+    width: 80%;
+    z-index: 1; 
 }
 
 .content-buttons {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: row;
-    gap: 10px;
-    width: 100%;
+    gap: 20px;
+    margin-top: 20px;
 }
 
 #btn-download , #btn-share {
     background-color: #3662E3; 
     color: #F2F5F9;
     border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
+    padding: 15px 30px;
+    border-radius: 10px;
     cursor: pointer;
     font-size: 16px;
     width: 150px;
+    align-items: center;
+    gap: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.content-buttons button:focus {
+    outline: none;
+}
+
+
+@media screen and (min-width: 1441px) {
+    body {
+        background-position: calc(100% - 30%) 65%;
+        background-size: auto 70%;
+    }
+}
+
+
+@media screen and (max-width: 1440px) and (min-width: 768px) {
+    body {
+        background-position: calc(100% - 30%) 75%;
+        background-size: auto 80%;
+    }
+}
+
+
+@media screen and (max-width: 767px) {
+    body {
+        background-position: calc(100% - 10%) 35%;
+        background-size: auto 60%;
+    }
+
+    .content-qr-code {
+        width: 160px;
+        height: 160px;
+    }
+
+    .content-qr-code img {
+        width: 80%;
+        padding: 15px;
+    }
+
+    #btn-download, #btn-share {
+        width: 140px;
+        padding: 12px 20px;
+        font-size: 14px;
+    }
 }
